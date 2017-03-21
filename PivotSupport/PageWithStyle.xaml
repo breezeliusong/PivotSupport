@@ -15,23 +15,23 @@
             Padding="0"
             ItemsSource="{x:Bind recordingList}">
             <Pivot.HeaderTemplate>
-                    <DataTemplate x:DataType="Repo:PriceVm">
-                        <StackPanel Name="sta" Orientation="Horizontal">
-                            <TextBlock
+                <DataTemplate x:DataType="Repo:PriceVm">
+                    <StackPanel Name="sta" Orientation="Horizontal">
+                        <TextBlock
                             Name="CodeTxt"
                             Text="{x:Bind Code}" />
-                            <TextBlock
+                        <TextBlock
                             Margin="10,0,0,0"
                             Text="{x:Bind ArticleName}" />
-                        </StackPanel>
-                    </DataTemplate>
-                </Pivot.HeaderTemplate>
+                    </StackPanel>
+                </DataTemplate>
+            </Pivot.HeaderTemplate>
 
-                <Pivot.ItemTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding Code}" />
-                    </DataTemplate>
-                </Pivot.ItemTemplate>
+            <Pivot.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Code}" />
+                </DataTemplate>
+            </Pivot.ItemTemplate>
             <Pivot.Resources>
                 <DataTemplate x:Key="RedPivotHeaderItemTemplate" x:DataType="Repo:PriceVm">
                     <StackPanel Orientation="Horizontal">
